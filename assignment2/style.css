@@ -1,0 +1,85 @@
+* { /* this includes the padding and border in the elements width and height */
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  :root { /* this is the section where i placed all my colors, they arent all being used bowever it was useful to have them all here to experiement with different designs */
+    --colour-one: rgba(246,148, 79,1); 
+    --colour-two: rgba(255,199,159,1);
+    --colour-three: rgba(255,174,116,1);
+    --colour-four: rgba(228,117, 39,1);
+    --colour-five: rgba(180, 84, 16,1);
+    --colour-six: rgb(10, 193, 254);
+  }
+
+  body { /* this section of code sets the gradient background for the website */
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(233,222,148,0.7427564775910365) 100%);
+  }
+  
+  * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #grid-container-bg{
+       /*  background-color: var(--colour-one); */
+        opacity: 0.2;
+        width: 67vw;
+        height: 1500px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 3fr;
+        /* I used the 'gap' property to ensure there was a consisten gap wtween the grid containers */
+        /* the 'vh' unit allows the gaps to adjust in size relative to the viewport */
+        gap: 1vh;
+        margin: 0 auto; /* i used auto here to centre the grid in its parent element */
+        margin-top: 30px;
+        margin-bottom: 30px; /* the top and bottom margins allow for space at the top and bottom of the page */
+    }
+
+    .grid-item-one { /* sets the border for all the grids */
+        border: none;
+        border-radius: 5px; /* makes rounded corners */
+    }
+
+    button:hover { 
+        opacity: 0.5; 
+    }
+
+/* this section contains all the different boxes */
+    #box-one{
+        grid-row: 1/3;
+        grid-column: 1/2;
+        background-color: var(--colour-six);
+    }
+
+    #box-two{
+        grid-row: 1/3;
+        grid-column: 3/4;
+        background-color: var(--colour-six);
+    }
+
+    #box-three{
+        grid-row: 2/4;
+        grid-column: 2/3;
+        background-color: var(--colour-six);
+    }
+ 
+    #box-four{
+        grid-row: 2/4;
+        grid-column: 4/5;
+        background-color: var(--colour-six);
+    }
+
+    #box-five{
+        grid-row: 1/3;
+        grid-column: 5/6;
+        background-color: var(--colour-six);
+    }
+
+    #box-seven{
+        grid-row: 4/7;
+        grid-column: 1/6;
+        background-color: var(--colour-six);
+    }
