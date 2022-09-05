@@ -1,0 +1,255 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+
+  --col-01:#171219;
+  --col-02:#ffffff;
+  --col-03:#5252ff;
+  --col-04:#ee73e8;
+  --col-05:#ff52ab;
+  font-size: 16px;
+}
+
+@font-face { /* linking an external typeface */
+  font-family: basteleur;
+  src: url("font/Basteleur-Moonlight.ttf");
+}
+
+body{
+  padding: 1rem;
+  font-family: "Helvetica", sans-serif;
+  background-color: var(--col-02);
+  color: var(--col-01);
+  transition: color ease-in 1s;
+}
+
+div.a { /* centering the nav links to give them a more unified aesthetic. some of the longer links were sitting funny */
+  text-align: center;
+}
+
+@keyframes colourCycle { /* currently making <a> change color when mouse hovers over */
+  0% {
+    color: var(--col-03);
+  }
+  100% {
+    color: var(--col-04);
+  }
+} 
+
+a:hover { 
+  transition: 3s;
+  animation: colourCycle 1s /* timing-function delay */ infinite /* direction fill-mode */;
+  color: #5252ff;
+}
+
+a:visited { /* i changed the colour of the visited links because the original colour was too hard to read in 'dark mode' */
+  color: #ff52ab;
+}
+
+#modeButton:hover { /* i added a transition to this element to indicate that is has a function */
+  transition: 2s;
+  transform: rotate(720deg); scale: 2;
+}
+
+nav {
+/*   max-width: 67%; */
+  display: block;
+  border-style: none;
+  padding: 20px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+/*   margin: 0; */
+  display: inline;
+  font-family: basteleur;
+  src: url("font/Basteleur-Moonlight.ttf");
+}
+
+section{
+  padding: 0.5em;
+  margin-bottom: 2rem;
+  /* background-color: beige; */
+}
+
+.text{
+  max-width: 67%;
+  display: block;
+  border-style: none;
+  padding: 25px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+h1{
+  font-size: 3rem;
+  font-family: basteleur;
+}
+
+h2{
+  font-size: 2rem;
+  font-family: basteleur;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;
+}
+
+i{
+  float: right;
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+/* here i am setting a class that will place the dark mode button on the right side of the page */
+.right {
+  float: right;
+}
+
+#grid-container-bg{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+   /* I used the 'gap' property to ensure there was a consisten gap wtween the grid containers */
+   /* the 'vh' unit allows the gaps to adjust in size relative to the viewport */
+   gap: 1vh;
+   margin: 0 auto; /* i used auto here to centre the grid in its parent element */
+   margin-top: 30px;
+   margin-bottom: 30px; /* the top and bottom margins allow for space at the top and bottom of the page */
+}
+
+.grid-item-one { /* sets the border for all the grids */
+   padding: .5em;
+   border: none;
+   border-radius: 5px; /* makes rounded corners */
+}
+
+/* this section contains all the different boxes */
+#box-one{
+  grid-column: 1/2;
+/*   background-color: var(--colour-six); */
+}
+
+#box-two{
+  grid-column: 3/4;
+  background-color: var(--colour-six);
+}
+
+#box-three{
+  grid-column: 2/3;
+  background-color: var(--colour-six);
+}
+
+#box-four{
+  grid-column: 4/5;
+  background-color: var(--colour-six);
+}
+
+#box-five{
+  grid-column: 5/6;
+  background-color: var(--colour-six);
+}
+
+#box-six{
+  grid-column: 6/7;
+  background-color: var(--colour-six);
+}
+
+/* this section tells the code to rescale the page based on screen size */
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion) {
+
+}
+
+/* changing grid layout for nav menu on smaller screens */
+@media only screen and (max-width: 992px) {
+  
+  #grid-container-bg{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+}
+@media only screen and (max-width: 740px) {
+  
+  #grid-container-bg{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  h2{
+    text-align: center;
+  }
+
+}
