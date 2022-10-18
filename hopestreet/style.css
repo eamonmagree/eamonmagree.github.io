@@ -1,0 +1,52 @@
+
+/* this was my first attempt at locking screen rotation, whilst it worked it felt quite clunky. The elements on screen had their scale changed and it made the wesite look ugly in portrait...maybe if i change the variablles this wont happen? */
+@media only screen and (orientation:portrait) {
+    body {
+      height: 100vw;
+      transform: rotate(90deg);
+    }
+  }
+
+body {
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(233,222,148,0.7427564775910365) 100vh);
+}
+
+.affirmation {
+    background-color:#F5F2F3;
+    opacity: 0.7;
+    width: 67%;
+    height: 67%;
+    display: block;
+    padding: 25px;
+    padding-bottom: 80px; /* padding = space between content and border */
+    margin: 0 auto;
+    margin-bottom: 50px;
+    /* overflow: auto; */
+    border-radius: 20px;
+    /* the code below centres the affirmation horizontally and viertically on the page */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@font-face {
+    font-family: basteleur;
+    src: url("fonts/ttf/Basteleur-Moonlight.ttf");
+}
+
+h1 {
+    font-family: basteleur;
+    max-width: 90%;
+    font-size: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding: 70px;
+}
+
+.scroller {
+    width: 1200%;
+}
