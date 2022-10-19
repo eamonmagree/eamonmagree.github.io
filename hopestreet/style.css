@@ -1,11 +1,11 @@
 
 /* this was my first attempt at locking screen rotation, whilst it worked it felt quite clunky. The elements on screen had their scale changed and it made the wesite look ugly in portrait...maybe if i change the variablles this wont happen? */
-/* @media only screen and (orientation:portrait) {
+@media only screen and (orientation:portrait) {
     body {
       height: 100vw;
       transform: rotate(90deg);
     }
-  } */
+  }
 
 body {
     background: rgb(238,174,202);
