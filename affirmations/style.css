@@ -1,0 +1,138 @@
+
+/* this section of code locks the page in landcape. it rotates the body 90 degrees when the device is in portrait orientation, making the user feel uncomfortable and forcing them to rotate the device for ease of use. A it brutal  */
+@media only screen and (orientation:portrait) {
+    body {
+      height: 100vw;
+      transform: rotate(90deg);
+    }
+  }
+
+body {
+    background: rgb(238,174,202);
+    background: linear-gradient(180deg, rgba(238,174,202,1) 0%, rgba(233,222,148,0.7427564775910365) 100%);
+}
+
+/* the width of this wrapper is 11x the width of the viewport. this allows all affirmation cards to fit on the website */
+.wrapper { 
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    width: 1100vw;
+    height: 100vh;
+    position: relative;
+}
+
+@font-face {
+    font-family: basteleur;
+    src: url("fonts/ttf/Basteleur-Moonlight.ttf");
+}
+
+.affirmation {
+    background-color:#F5F2F3;
+    opacity: 0.6; /* i reduced the opacity to make the cards less visually jarring. This adds to the calming feel of the websites layout */
+    width: 67vw;
+    display: block;
+    padding: 25px;
+    margin: 0 auto;
+    border-radius: 20px;
+    position: absolute;
+    /* code below centres the affirmation cards within the parent element */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-family: basteleur;
+    max-width: 90%;
+    font-size: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
+}
+
+h2 {
+    font-family: basteleur;
+    color: #ffffff;
+    max-width: 90%;
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
+    text-align: center;
+}
+
+/* the two classes below were made for the initial slide which acts as a prompt for how to use the website. I used a different colour pallet to differentiate the two classes, emphasising to the user that they have entered the 'affirmation' section of the website */
+
+p {
+    font-family: basteleur;
+    color: #ffffff;
+    float: inline-end;
+    text-align: center;
+    font-size: 2.5vh;
+}
+
+.starter {
+    background-color:#000000;
+    opacity: 0.6;
+    width: 67vw;
+    height: 67vh;
+    display: block;
+    padding: 25px;
+    margin: 0 auto;
+    overflow: visible;
+    border-radius: 20px;
+    position: absolute;
+    /* code below centres the affirmation cards within the parent element */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* the code below sets classes for each card, positioning them on the x-axis*/
+#info {
+    left: 50vw;
+}
+
+#af-one {
+    left: 1050vw;
+}
+
+#af-two {
+    left: 150vw;
+}
+
+#af-three {
+    left: 250vw;
+}
+
+#af-four {
+    left: 350vw;
+}
+
+#af-five {
+    left: 450vw;
+}
+
+#af-six {
+    left: 550vw;
+}
+
+#af-seven {
+    left: 650vw;
+}
+
+#af-eight {
+    left: 750vw;
+}
+
+#af-nine {
+    left: 850vw;
+}
+
+#af-ten {
+    left: 950vw;
+}
