@@ -16,10 +16,9 @@ body {
     overflow-x: scroll;
     overflow-y: hidden;
     display: flex;
-    flex-direction: row;
-    width: 1000vw;
+ /*    flex-direction: row; */
+    width: 1100vw;
     height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     position: relative;
 }
 
@@ -67,10 +66,51 @@ h1 {
     /* padding: 70px; */
 }
 
+h2 {
+    font-family: basteleur;
+    color: #ffffff;
+    max-width: 90%;
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
+/*     position: absolute; */
+}
+
+p {
+    font-family: basteleur;
+    color: #ffffff;
+    float: inline-end;
+    text-align: center;
+    font-size: 2vh;
+}
+
+.starter {
+    background-color:#000000;
+    opacity: 0.6;
+    width: 67vw;
+    height: 67vh;
+    display: block;
+    padding: 25px;
+    margin: 0 auto;
+    overflow: visible;
+    border-radius: 20px;
+    position: absolute;
+    /* code below centres the affirmation cards within the parent element */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* the code below sets classes for each card, positioning them on the x-axis*/
+#info {
+    left: 50vw;
+}
 
 #af-one {
-    left: 50vw;
+    left: 1050vw;
 }
 
 #af-two {
