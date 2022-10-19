@@ -1,0 +1,150 @@
+
+/* this was my first attempt at locking screen rotation, whilst it worked it felt quite clunky. The elements on screen had their scale changed and it made the wesite look ugly in portrait...maybe if i change the variablles this wont happen? */
+@media only screen and (orientation:portrait) {
+    body {
+      height: 100vw;
+      transform: rotate(90deg);
+    }
+  }
+
+body {
+    background: rgb(238,174,202);
+    background: linear-gradient(180deg, rgba(238,174,202,1) 0%, rgba(233,222,148,0.7427564775910365) 100%);
+}
+
+.wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+ /*    flex-direction: row; */
+    width: 1100vw;
+    height: 100vh;
+    position: relative;
+}
+
+/* .outer-wrapper { 
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+
+} */
+
+
+@font-face {
+    font-family: basteleur;
+    src: url("fonts/ttf/Basteleur-Moonlight.ttf");
+}
+
+.affirmation {
+    background-color:#F5F2F3;
+    opacity: 0.6;
+    width: 67vw;
+    /* height: 67vh; */
+    display: block;
+    padding: 25px;
+    margin: 0 auto;
+    /* overflow: auto; */
+    border-radius: 20px;
+    position: absolute;
+    /* code below centres the affirmation cards within the parent element */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-family: basteleur;
+    max-width: 90%;
+    font-size: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
+    /* padding: 70px; */
+}
+
+h2 {
+    font-family: basteleur;
+    color: #ffffff;
+    max-width: 90%;
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
+/*     position: absolute; */
+}
+
+p {
+    font-family: basteleur;
+    color: #ffffff;
+    float: inline-end;
+    text-align: center;
+    font-size: 2vh;
+}
+
+.starter {
+    background-color:#000000;
+    opacity: 0.6;
+    width: 67vw;
+    height: 67vh;
+    display: block;
+    padding: 25px;
+    margin: 0 auto;
+    overflow: visible;
+    border-radius: 20px;
+    position: absolute;
+    /* code below centres the affirmation cards within the parent element */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* the code below sets classes for each card, positioning them on the x-axis*/
+#info {
+    left: 50vw;
+}
+
+#af-one {
+    left: 1050vw;
+}
+
+#af-two {
+    left: 150vw;
+}
+
+#af-three {
+    left: 250vw;
+}
+
+#af-four {
+    left: 350vw;
+}
+
+#af-five {
+    left: 450vw;
+}
+
+#af-six {
+    left: 550vw;
+}
+
+#af-seven {
+    left: 650vw;
+}
+
+#af-eight {
+    left: 750vw;
+}
+
+#af-nine {
+    left: 850vw;
+}
+
+#af-ten {
+    left: 950vw;
+}
